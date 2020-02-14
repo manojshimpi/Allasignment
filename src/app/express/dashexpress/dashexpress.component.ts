@@ -7,7 +7,7 @@ import { Router,ActivatedRoute} from '@angular/router';
 })
 export class DashexpressComponent implements OnInit {
 
-  constructor(private router :Router) { }
+  constructor(public router :Router) { }
 
   ngOnInit() {
   }
