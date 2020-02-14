@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AngularmComponent } from './angularm.component';
+import { DashnodeComponent } from './dashnode.component';
 
-describe('AngularmComponent', () => {
-  let component: AngularmComponent;
-  let fixture: ComponentFixture<AngularmComponent>;
+describe('DashnodeComponent', () => {
+  let component: DashnodeComponent;
+  let fixture: ComponentFixture<DashnodeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AngularmComponent ]
+      declarations: [ DashnodeComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AngularmComponent);
+    fixture = TestBed.createComponent(DashnodeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

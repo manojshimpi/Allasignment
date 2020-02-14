@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AngularmComponent } from '../angularm/angularm.component';
-import { ComponentchildComponent } from '../componentchild/componentchild.component';
+import { DashComponent } from './dashboard/dash/dash.component'
+import { ChildtoparenthComponent } from './assignonlycomponent/childtoparenth/childtoparenth.component'
 
 const routes: Routes = [
   {
-    path: 'admin',
-    component: AngularmComponent,
+    path: 'angular',
+    component: DashComponent,
     children: [
       {
       path: '',
       children: [
-        { path: 'child', component: ComponentchildComponent },
+        { path: 'childtoparent', component:ChildtoparenthComponent},
+        { path: '', component:DashComponent}
        ],
     }
   ]
@@ -19,7 +20,6 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AngularmComponent,ComponentchildComponent],
   imports: [RouterModule.forChild(routes)],
   exports:[RouterModule]
 })
