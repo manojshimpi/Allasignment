@@ -29,12 +29,13 @@ import { HierarchicalinjectorsComponent } from './assignonlycomponent/hierarchic
 import { DependencyprovidersComponent } from './assignonlycomponent/dependencyproviders/dependencyproviders.component';
 import { DependencyinjectioninactionComponent } from './assignonlycomponent/dependencyinjectioninaction/dependencyinjectioninaction.component';
 import { NavigatethecomponenttreewithdiComponent } from './assignonlycomponent/navigatethecomponenttreewithdi/navigatethecomponenttreewithdi.component'
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 
 @NgModule({
   imports: [
     CommonModule,
-    AngularmroutingModule],
+    AngularmroutingModule,PdfViewerModule],
   declarations: [DashComponent, ChildtoparenthComponent, HeadermenuComponent, DatabingvariantComponent, EventbindingmoretypesComponent, TemplatesmoretypesComponent, DirectivemoretypesComponent, PipesmoreComponent, RoutingprocesonlycodeComponent, ServicesmortypesComponent, HttpclientComponent, ClipromtsComponent, AllformsComponent, MaterialscdkvirtualscrollingComponent, MaterialscdkdragdropComponent, AnimationComponent, TestingbuildingangularprojectComponent, AlloperatorsComponent, LifecyclehooksComponent, NgmoduletypesComponent, ObservablerxjsComponent, ComponentsstyleComponent, AngularelementsComponent, DependencyinjectioninAngularComponent, HierarchicalinjectorsComponent, DependencyprovidersComponent, DependencyinjectioninactionComponent, NavigatethecomponenttreewithdiComponent]
 })
 

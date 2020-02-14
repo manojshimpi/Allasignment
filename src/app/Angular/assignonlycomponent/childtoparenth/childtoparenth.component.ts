@@ -12,4 +12,8 @@ export class ChildtoparenthComponent implements OnInit {
   ngOnInit() {
   }
 
+  pdfSrc ="https://www.tutorialspoint.com/angular7/angular7_tutorial.pdf";
+  pdfSrc1 ="http://localhost/demo21/Allment/allment/src/assets/pdf/demo.pdf";
+  
+ 
 }
