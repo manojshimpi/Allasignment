@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  
   constructor() { }
+
+
 
   ngOnInit() {
   }
-
+  
 }

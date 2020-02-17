@@ -1,1 +1,106 @@
-<p>directivemoretypes works!</p>
+<div class="conatainer" style="margin-left: 10px; margin-right: 10px;">
+    <div class="row" style="background-color:rgb(32, 7, 9)">
+       <div class="col-md-3 col-sm-3 col-lg-3"  *ngFor="let databindingvalue of databindingtypes" (click)="showBinding(databindingvalue)" style="margin-top:5px;">
+       <div class="card " style="background-color:rgb(112, 204, 216)">
+          <ul class="list-group list-group-flush" [style.cursor]="'pointer'"> 
+             <li class="list-group-item" [style.background-color]="'rgb(112, 204, 216)'" [style.color]="'white'">{{ databindingvalue  }}</li>
+          </ul>
+       </div>
+    </div>
+ </div>
+ </div>
+ <div  class="jumbotron text-center" *ngIf="TitleGlobal; else notShow">
+    <h3>
+       {{ TitleGlobal }}
+    </h3>
+ </div>
+ <ng-template #notShow>
+    <div class="jumbotron text-center">
+       <pdf-viewer [src]= "urlpdf"
+       [render-text]="true"
+       style="display: block;"
+       ></pdf-viewer>
+    </div>
+ </ng-template>
+ <div class="container" *ngIf="bindingStringFlag==='Component Directives'">
+    <div class="row">
+       <div class="col-sm-6">
+          <h3>{{TitleGlobal}}  ===================></h3>
+          <p>Component Directives: Component directives are used in main class. They contain 
+             the detail of how the component should be processed, instantiated and used at runtime. 
+          </p>
+       </div>
+       <div class="col-sm-6">
+          <h3>Example Below</h3>
+             <p>
+                A component, rather than adding/modifying behaviour, actually creates its own 
+                view (hierarchy of DOM elements) with attached behaviour. An example use case for
+                this might be a contact card component
+            </p>
+            <img [src]="compoimage">
+          
+       </div>
+    </div>
+ </div>
+ <div class="container" *ngIf="bindingStringFlag==='Structural Directives'">
+    <div class="row">
+      <div class="col-sm-12">
+          <h3>Example Below</h3>
+            <pdf-viewer [src]= "urlpdfstru"
+            [render-text]="true"
+            style="display: block;"
+            ></pdf-viewer>
+        </div>
+    </div>
+ </div>
+ <div class="container" *ngIf="bindingStringFlag==='Attribute Directives'">
+    <div class="row">
+       <div class="col-sm-6">
+          <h3>{{TitleGlobal}} ===================> </h3>
+          <div>
+             <ul class="a">
+                <li> Build a simple attribute directive</li>
+                <li>Apply the attribute directive</li>
+                <li>Respond to user-initiated events</li>
+                <li>Pass values into the directive with an @Input data binding</li>
+                <li>Bind to an @Input alias</li>
+                <li>Write a harness to try it</li>
+             </ul>
+          </div>
+          <p>
+             <strong>(click)</strong> Checks for a single click; including the mouse clicking down, and then back up again<br>
+             <strong>(mouseover)</strong>Registers when the cursor is over the element on which this attribute is applied<br>
+             <strong>(mousedown)</strong>Will register the event when the mouse is clicked down, not needing to wait for the click to release<br>
+             <strong>(mouseup)</strong>This event registers when the mouse click is released, so the click down doesn’t need to be done on the element itself<br>
+             <strong>(dblclick)</strong>	 The double click event will register the event when it detects two mouse clicks in a short timeframe<br>
+             <strong>(drag)</strong>	Will register when the item is dragged<br>
+             <strong>(dragover)</strong>	 Registers the event every time an item is dragged over this element
+          </p>
+       </div>
+       <div class="col-sm-6">
+          <h3>Example Below</h3>
+          <div>
+             <!--<p appHighlight style="padding:10px">Highlight me!</p> -->
+             <!-- <p appHighlight highlightColor="yellow">Highlighted in yellow</p>
+                <p appHighlight [highlightColor]="'orange'">Highlighted in orange</p>-->
+             <!--<p appHighlight [highlightColor]="color">Highlighted with parent component's color</p>-->
+             <p [appHighlight]="yellow">Highlight me!</p>
+             <p [appHighlight]="'pink'">Highlight me!</p>
+             <br>
+             <h1>Attribute Directive</h1>
+             <h4>Pick a highlight color</h4>
+             <br>
+             <div>
+                <input type="radio" name="colors" (click)="color='lightgreen'">Green
+                <input type="radio" name="colors" (click)="color='yellow'">Yellow
+                <input type="radio" name="colors" (click)="color='cyan'">Cyan
+             </div>
+             <br>
+             <p [appHighlight]="color">Highlight me!</p>
+             <p [appHighlight]="color" defaultColor="violet">
+                Highlight me too!
+             </p>
+          </div>
+       </div>
+    </div>
+ </div>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import {AngularmroutingModule } from './angularmrouting.module';
 import { DashComponent } from './dashboard/dash/dash.component';
 import { ChildtoparenthComponent } from './assignonlycomponent/childtoparenth/childtoparenth.component';
@@ -28,15 +29,29 @@ import { DependencyinjectioninAngularComponent } from './assignonlycomponent/dep
 import { HierarchicalinjectorsComponent } from './assignonlycomponent/hierarchicalinjectors/hierarchicalinjectors.component';
 import { DependencyprovidersComponent } from './assignonlycomponent/dependencyproviders/dependencyproviders.component';
 import { DependencyinjectioninactionComponent } from './assignonlycomponent/dependencyinjectioninaction/dependencyinjectioninaction.component';
-import { NavigatethecomponenttreewithdiComponent } from './assignonlycomponent/navigatethecomponenttreewithdi/navigatethecomponenttreewithdi.component'
+import { NavigatethecomponenttreewithdiComponent } from './assignonlycomponent/navigatethecomponenttreewithdi/navigatethecomponenttreewithdi.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { HighlightDirective } from './assignonlycomponent/directivemoretypes/highlight.directive';
+
 
 
 @NgModule({
   imports: [
-    CommonModule,
-    AngularmroutingModule,PdfViewerModule],
-  declarations: [DashComponent, ChildtoparenthComponent, HeadermenuComponent, DatabingvariantComponent, EventbindingmoretypesComponent, TemplatesmoretypesComponent, DirectivemoretypesComponent, PipesmoreComponent, RoutingprocesonlycodeComponent, ServicesmortypesComponent, HttpclientComponent, ClipromtsComponent, AllformsComponent, MaterialscdkvirtualscrollingComponent, MaterialscdkdragdropComponent, AnimationComponent, TestingbuildingangularprojectComponent, AlloperatorsComponent, LifecyclehooksComponent, NgmoduletypesComponent, ObservablerxjsComponent, ComponentsstyleComponent, AngularelementsComponent, DependencyinjectioninAngularComponent, HierarchicalinjectorsComponent, DependencyprovidersComponent, DependencyinjectioninactionComponent, NavigatethecomponenttreewithdiComponent]
+    CommonModule,FormsModule,
+    AngularmroutingModule, PdfViewerModule],
+  declarations: [DashComponent, ChildtoparenthComponent,
+    HeadermenuComponent, DatabingvariantComponent,
+    EventbindingmoretypesComponent, TemplatesmoretypesComponent,
+    DirectivemoretypesComponent, PipesmoreComponent, RoutingprocesonlycodeComponent,
+    ServicesmortypesComponent, HttpclientComponent, ClipromtsComponent,
+    AllformsComponent, MaterialscdkvirtualscrollingComponent,
+    MaterialscdkdragdropComponent, AnimationComponent, TestingbuildingangularprojectComponent,
+    AlloperatorsComponent, LifecyclehooksComponent, NgmoduletypesComponent, ObservablerxjsComponent,
+    ComponentsstyleComponent, AngularelementsComponent,
+    DependencyinjectioninAngularComponent, HierarchicalinjectorsComponent,
+    DependencyprovidersComponent, DependencyinjectioninactionComponent,
+    NavigatethecomponenttreewithdiComponent,
+    HighlightDirective]
 })
 
 

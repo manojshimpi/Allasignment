@@ -1,11 +1,29 @@
-<pdf-viewer [src]="pdfSrc" 
-              [render-text]="true"
-              style="display: block;"
-  ></pdf-viewer>
+<a class="btn btn-info btn-md" (click)="GoBack()" *ngIf="pdfflag===false"> Back </a>
 
-  <pdf-viewer [src]="pdfSrc1" 
-              [render-text]="true"
-              style="display: block;"
-  ></pdf-viewer>
+<pdf-viewer [src]= "pdfSrc12"
+        [render-text]="true"
+        style="display: block;"
+></pdf-viewer>
+
+
+
+
+
+<div class="conatainer" style="margin-left: 10px; margin-right: 10px;">
+<div class="row" style="background-color:rgb(32, 7, 9)">
+  <div class="col-md-3 col-sm-3 col-lg-3"  *ngFor="let recipient of allpdffiles" (click)="showpdffile(recipient.File)" style="margin-top:5px;">
+      <div class="card " *ngIf="pdfflag===true" style="background-color:palevioletred" >
+          <ul class="list-group list-group-flush" [style.cursor]="'pointer'"> 
+            <li class="list-group-item" [style.background-color]="recipient.color" [style.color]="recipient.colortext">{{ recipient.filename  }}</li>
+        </ul>
+      </div>
+    </div>
+   
+  </div>
+</div>
+
+
+
+
 
   

@@ -7,9 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemplatesmoretypesComponent implements OnInit {
 
+  months = ["January", "February", "March", "April", "May", "June", "July", 
+  "August", "September", "October", "November", "December"]; 
+  isavailable = false; // variable is set to true
+  
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() 
+  {
   }
+
+
+  myClickFunction(event)
+ { 
+    //just added console.log which will display the event details in browser on click of the button. 
+    this.isavailable = !this.isavailable; 
+    console.log(event); 
+ }
+
+ changemonths(event) 
+ { 
+    alert("Changed month from the Dropdown"); 
+ } 
+ 
 
 }
