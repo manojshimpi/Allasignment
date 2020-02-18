@@ -6,14 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./databingvariant.component.css']
 })
 export class DatabingvariantComponent implements OnInit {
-
+ // start common code below
   databindingtypes=['String Interpolation','Property Binding','Event Binding','Two Way Data Binding'];
   bindingStringFlag:any;
   binding:any;
   TitleGlobal:any;
-
   notShow:any=true;
-  
+//End 
 
   imagepath:any='../assets/image/stringbinding.png';
   twowaydatabinding:any='../assets/image/two-way-binding.png';
@@ -46,14 +45,14 @@ export class DatabingvariantComponent implements OnInit {
     
   }
   
-
+//Common code
   showBinding(value:any)
   {
       this.bindingStringFlag=value;
       this.binding=value;
       this.TitleGlobal=value;
   }
-
+//End
   
 
 }

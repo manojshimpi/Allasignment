@@ -32,6 +32,7 @@ import { DependencyinjectioninactionComponent } from './assignonlycomponent/depe
 import { NavigatethecomponenttreewithdiComponent } from './assignonlycomponent/navigatethecomponenttreewithdi/navigatethecomponenttreewithdi.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { HighlightDirective } from './assignonlycomponent/directivemoretypes/highlight.directive';
+import { ExponentialStrengthPipe } from './assignonlycomponent/pipesmore/exponential-strength.pipe';
 
 
 
@@ -51,7 +52,8 @@ import { HighlightDirective } from './assignonlycomponent/directivemoretypes/hig
     DependencyinjectioninAngularComponent, HierarchicalinjectorsComponent,
     DependencyprovidersComponent, DependencyinjectioninactionComponent,
     NavigatethecomponenttreewithdiComponent,
-    HighlightDirective]
+    HighlightDirective,
+    ExponentialStrengthPipe]
 })
 
 

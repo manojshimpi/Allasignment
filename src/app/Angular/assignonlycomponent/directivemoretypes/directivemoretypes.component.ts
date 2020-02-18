@@ -18,7 +18,7 @@ export class DirectivemoretypesComponent implements OnInit {
   
 
   constructor() { 
-    //this.color = 'green';
+    this.color = 'green';
   }
 
   ngOnInit() {

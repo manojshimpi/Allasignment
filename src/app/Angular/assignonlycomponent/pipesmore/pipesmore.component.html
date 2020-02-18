@@ -1,1 +1,157 @@
-<p>pipesmore works!</p>
+
+<div class="conatainer" style="margin-left: 10px; margin-right: 10px;">
+
+    <div class="row" style="background-color:rgb(32, 7, 9)">
+        
+      <div class="col-md-3 col-sm-3 col-lg-3"  *ngFor="let databindingvalue of databindingtypes" (click)="showBinding(databindingvalue)" style="margin-top:5px;">
+          <div class="card " style="background-color:rgb(112, 204, 216)">
+              <ul class="list-group list-group-flush" [style.cursor]="'pointer'"> 
+                    <li class="list-group-item" [style.background-color]="'rgb(112, 204, 216)'" [style.color]="'white'">{{ databindingvalue  }}</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+
+</div>
+
+
+
+<div  class="jumbotron text-center" *ngIf="TitleGlobal; else notShow">
+    <h3>
+       {{ TitleGlobal }}
+    </h3>
+  </div>
+  
+
+  <ng-template #notShow>
+        <div class="jumbotron text-center">
+            <p>
+                Pending Data
+            </p>
+         </div>
+  </ng-template>
+
+
+ 
+
+
+
+<div class="container" *ngIf="bindingStringFlag==='PIPE Custom'">
+    
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>{{TitleGlobal}}  ===================></h3>
+            <p></p>
+         </div>
+        
+         <div class="col-sm-6">
+            <h3>Example Below</h3>
+             <h3>Parameterizing a pipe</h3>
+            <p>The hero's birthday is {{ birthday | date:"MM/dd/yy" }} </p>
+
+
+            <p>The hero's birthday is {{ birthday | date:format }}</p>
+            <button (click)="toggleFormat()">Toggle Format</button>
+
+            <h3> Chaining pipes </h3>
+
+            The chained hero's birthday is
+            {{ birthday | date | uppercase}}
+            <br>
+            The chained hero's birthday is
+            {{  birthday | date:'fullDate' | uppercase}}
+
+            <h3>Custom Pipe</h3>
+            <h2>Power Booster</h2>
+            <p>Super power boost: {{2 | exponentialStrength: 10}}</p>
+            <br>
+            
+            <h2>Power Boost Calculator</h2>
+            <div>Normal power: <input [(ngModel)]="power"></div>
+            <div>Boost factor: <input [(ngModel)]="factor"></div>
+            <p>
+            Super Hero Power: {{power | exponentialStrength: factor}}
+            </p>
+
+
+
+            <table  border="1">
+                <tr *ngFor="let employees of employeeData">
+                    <td>{{ employees.name | exponentialStrength:employees.Gender}}</td>
+                    <td>{{ employees.Mob }}</td>
+                    <td>{{ employees.Gender }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div class="container" *ngIf="bindingStringFlag==='Pending1'">
+    
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>{{TitleGlobal}} ===================> </h3>
+         </div>
+        
+         <div class="col-sm-6">
+            <h3>Example Below</h3>
+            <div>
+                <input [value]='myBlog' class="form-control">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div class="container" *ngIf="bindingStringFlag==='Pending2'">
+    
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>{{TitleGlobal}} ===================> </h3>
+         </div>
+        
+         <div class="col-sm-6">
+            <h3>Example Below</h3>
+            <div>
+                <button (click)='additems()' class="btn btn-info">
+                    Click Here
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="container" *ngIf="bindingStringFlag==='Pending3'">
+    
+    <div class="row">
+        
+        <div class="col-sm-6">
+            <h3>{{TitleGlobal}}  ===================></h3>
+            <p><img [src]="twowaydatabinding" /></p>
+            <p>The combination of property binding and the event binding is called the two way data binding. two-way databinding, automatic synchronization of data happens between the Model and the View.change is reflected in the both components.Whenever you make changes in the model it will reflected immedietly in the view component.</p>
+         </div>
+        
+         <div class="col-sm-6">
+            <h3>Example Below</h3>
+            <div>
+                <input type="text" class="form-control" [(ngModel)]='ngname'>
+            </div>
+            <br>
+            <p>{{ ngname }}</p>
+         </div>
+    </div>
+
+</div>
+
+
+
+
+
+    

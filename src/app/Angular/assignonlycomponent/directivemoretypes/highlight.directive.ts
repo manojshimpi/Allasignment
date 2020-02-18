@@ -12,7 +12,7 @@ export class HighlightDirective {
   }
 
   //@Input() highlightColor: string;
-  
+
   @Input('appHighlight') highlightColor: string;
   
   @Input() defaultColor: string;
