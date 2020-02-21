@@ -76,7 +76,10 @@ notShow:any=true;
       gender:['',Validators.required],
       acceptTerms: [true, Validators.requiredTrue],
       countryControl: ['',Validators.required],
-      hobbies: this.formBuilder.array([], [Validators.required])
+      hobbies: this.formBuilder.array([], [Validators.required]),
+      skills:this.formBuilder.array([
+          this.formBuilder.control(''),
+      ])
       }, {
         validator: MustMatch('password', 'confirmPassword')
     });
@@ -86,6 +89,9 @@ notShow:any=true;
     this.dataarray.push(this.home);
   }
 
+  
+ 
+ // used for reactive form
   get f() { return this.registerForm.controls; }
 
   // This code is used for checkbox purpose
@@ -109,10 +115,20 @@ notShow:any=true;
     
   }
 
+// Start Code  Reactive add skill
 
-  // Reactive Form
- 
-  
+  get skilld()
+  {
+    return this.registerForm.get('skills') as FormArray;
+  }
+
+  showformarray()
+  {
+    this.skilld.push(this.formBuilder.control(''));
+  }
+
+// End Code
+
 //Common code
 showBinding(value:any)
 {
@@ -130,11 +146,13 @@ onSubmit1() {
   if (this.registerForm.invalid) {
       return;
   }
-  console.log(this.f.hobbies.value);
+  //console.log(this.f.hobbies.value);
+  console.log("Skill " + this.registerForm.get(['skills' ,'0']).value);
   alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value))
 }
 //End
 
+// used modal drive form used the code
 addForm()
 {
   this.home = new Hero();
@@ -143,12 +161,13 @@ addForm()
 
 onSubmit()
 {
-  
   alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.dataarray))
 }
 
 Remove(index){
   this.dataarray.splice(index);
 }
+
+//end used modal drive form used the code
 
 }

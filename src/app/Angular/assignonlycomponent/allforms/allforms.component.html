@@ -115,6 +115,10 @@
                                     </div>
                                 </div>
 
+
+                               
+
+
                                 
                              
                                 <div class="form-group">
@@ -174,6 +178,17 @@
                                         <div *ngIf="f.confirmPassword.errors.mustMatch">Passwords must match</div>
                                     </div>
                                 </div>
+
+                                 <div formArrayName="skills">
+                                    <label>Skills</label><br>
+                                    <input type="button" (click)="showformarray()" value="Add New Skill" class="btn btn-info">
+                                    
+                                    <div class="form-group" *ngFor="let skill of skilld.controls;let i=index">
+                                        <label>Skills {{ i+1}}</label><br>
+                                        <input type="text" [formControlName]="i" class="form-control" />
+                                    </div>
+                                </div>
+
 
                                 <div class="form-group form-check">
                                     <input type="checkbox" formControlName="acceptTerms" id="acceptTerms" class="form-check-input" [ngClass]="{ 'is-invalid': submitted && f.acceptTerms.errors }" />

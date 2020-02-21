@@ -36,6 +36,8 @@ import { ExponentialStrengthPipe } from './assignonlycomponent/pipesmore/exponen
 import { HttpClientModule } from '@angular/common/http';
 import { FileUploadModule } from 'ng2-file-upload';
 
+import { ObservablesComponent } from './assignonlycomponent/observables/observables.component';
+
 
 
 @NgModule({
@@ -55,7 +57,8 @@ import { FileUploadModule } from 'ng2-file-upload';
     DependencyprovidersComponent, DependencyinjectioninactionComponent,
     NavigatethecomponenttreewithdiComponent,
     HighlightDirective,
-    ExponentialStrengthPipe]
+    ExponentialStrengthPipe,
+    ObservablesComponent]
 })
 
 

@@ -28,6 +28,7 @@ import { HierarchicalinjectorsComponent } from './assignonlycomponent/hierarchic
 import { DependencyprovidersComponent } from './assignonlycomponent/dependencyproviders/dependencyproviders.component';
 import { DependencyinjectioninactionComponent } from './assignonlycomponent/dependencyinjectioninaction/dependencyinjectioninaction.component';
 import { NavigatethecomponenttreewithdiComponent } from './assignonlycomponent/navigatethecomponenttreewithdi/navigatethecomponenttreewithdi.component'
+import { ObservablesComponent } from './assignonlycomponent/observables/observables.component';
 
 
 
@@ -67,6 +68,8 @@ const routes: Routes = [
         { path:'Dependencyproviders' , component:DependencyprovidersComponent},
         { path:'Dependencyinjectioninaction' , component:DependencyinjectioninactionComponent},
         { path:'Navigatethecomponenttreewithdi' , component:NavigatethecomponenttreewithdiComponent},
+
+        { path:'Observable',component:ObservablesComponent}
        
        
        ],
