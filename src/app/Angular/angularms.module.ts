@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {AngularmroutingModule } from './angularmrouting.module';
 import { DashComponent } from './dashboard/dash/dash.component';
 import { ChildtoparenthComponent } from './assignonlycomponent/childtoparenth/childtoparenth.component';
@@ -33,12 +33,14 @@ import { NavigatethecomponenttreewithdiComponent } from './assignonlycomponent/n
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { HighlightDirective } from './assignonlycomponent/directivemoretypes/highlight.directive';
 import { ExponentialStrengthPipe } from './assignonlycomponent/pipesmore/exponential-strength.pipe';
+import { HttpClientModule } from '@angular/common/http';
+import { FileUploadModule } from 'ng2-file-upload';
 
 
 
 @NgModule({
   imports: [
-    CommonModule,FormsModule,
+    CommonModule,FormsModule,ReactiveFormsModule,HttpClientModule,FileUploadModule,
     AngularmroutingModule, PdfViewerModule],
   declarations: [DashComponent, ChildtoparenthComponent,
     HeadermenuComponent, DatabingvariantComponent,
