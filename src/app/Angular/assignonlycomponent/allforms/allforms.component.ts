@@ -15,7 +15,7 @@ export class AllformsComponent implements OnInit {
 registerForm: FormGroup;
 submitted = false;
 arraygender=['Female','Male'];
-
+counter:any;
 Data: Array<any> = [
   { name: 'Cricket', value: 'cricket' },
   { name: 'Dancing', value: 'dancing' }
@@ -147,8 +147,17 @@ onSubmit1() {
       return;
   }
   //console.log(this.f.hobbies.value);
-  console.log("Skill " + this.registerForm.get(['skills' ,'0']).value);
+  
+  // For loop  used for skills
+  this.counter=0;
+  for(let shiskill of this.skilld.controls)
+  {
+    console.log("Skill " + this.registerForm.get(['skills' ,this.counter]).value);
+    this.counter = this.counter +1;
+  }
+
   alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value))
+  
 }
 //End
 
