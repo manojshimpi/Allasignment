@@ -116,7 +116,6 @@ notShow:any=true;
   }
 
 // Start Code  Reactive add skill
-
   get skilld()
   {
     return this.registerForm.get('skills') as FormArray;
@@ -150,6 +149,7 @@ onSubmit1() {
   
   // For loop  used for skills
   this.counter=0;
+  
   for(let shiskill of this.skilld.controls)
   {
     console.log("Skill " + this.registerForm.get(['skills' ,this.counter]).value);
@@ -157,7 +157,7 @@ onSubmit1() {
   }
 
   alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value))
-  
+
 }
 //End
 
