@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import {
-  map
+  map,
 } from "rxjs/operators";
 
 import { Observable } from "rxjs"
@@ -19,13 +19,13 @@ class SearchItem {
 @Injectable({
   providedIn: 'root'
 })
-export class SearchService {
+export class SearchService 
+{
   apiRoot: string = "https://itunes.apple.com/search";
-  private results1: Observable<SearchItem[]>;
   constructor(private http: HttpClient) {}
 
   search(term: string): Observable<SearchItem[]> {
-    let apiURL = `${this.apiRoot}?term=${term}&media=music&limit=50`;
+    let apiURL = `${this.apiRoot}?term=${term}&media=music&limit=25`;
     return this.http.get(apiURL).pipe(
       map(res => {
         return res.results.map(item => {

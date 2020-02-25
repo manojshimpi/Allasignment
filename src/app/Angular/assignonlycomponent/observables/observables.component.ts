@@ -37,7 +37,7 @@ export class ObservablesComponent implements OnInit {
   widthExp:any='500';
   constructor(private itunes: SearchService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.searchField = new FormControl();
     this.results = this.searchField.valueChanges.pipe(
       debounceTime(400),

@@ -37,6 +37,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FileUploadModule } from 'ng2-file-upload';
 
 import { ObservablesComponent } from './assignonlycomponent/observables/observables.component';
+import { TestComponent } from './test/test.component';
 
 
 
@@ -58,7 +59,8 @@ import { ObservablesComponent } from './assignonlycomponent/observables/observab
     NavigatethecomponenttreewithdiComponent,
     HighlightDirective,
     ExponentialStrengthPipe,
-    ObservablesComponent]
+    ObservablesComponent,
+    TestComponent]
 })
 
 

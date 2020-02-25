@@ -25,14 +25,12 @@ export class DatabingvariantComponent implements OnInit {
     price: 700
    };
 
-  // Propertyvlaue Binding
+  // Property vlaue Binding
   myBlog: string = "My First Angular Blog";
 
   // Two Way Data Binding
   ngname:any="manoj shimpi";
-  constructor() { 
-    
-  }
+  constructor() { }
   
 
   // Event Data Binding
