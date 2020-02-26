@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from "@angular/forms";
 import { SearchService } from './search.service';
-import { Injectable } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
+
 import {
   map,
   debounceTime,
@@ -11,6 +10,8 @@ import {
   tap
 } from "rxjs/operators";
 import { Observable } from 'rxjs';
+
+import { FoodService } from './food.service';
 
 class SearchItem {
   constructor(
@@ -35,9 +36,12 @@ export class ObservablesComponent implements OnInit {
   private searchField: FormControl;
   
   widthExp:any='500';
-  constructor(private itunes: SearchService) {}
+  constructor(private itunes: SearchService, private foodser:FoodService) {
+  }
 
-  ngOnInit(): void {
+  // Start code to get foods
+
+  ngOnInit() {
     this.searchField = new FormControl();
     this.results = this.searchField.valueChanges.pipe(
       debounceTime(400),
@@ -47,7 +51,6 @@ export class ObservablesComponent implements OnInit {
       tap(_ => (this.loading = false))
     );
   }
-
 
   doSearch(term: string) {
     this.itunes.search(term);

@@ -14,7 +14,6 @@ export class PipesmoreComponent implements OnInit {
   TitleGlobal:any;
   notShow:any=true;
 //End
-
   birthday = new Date(1988, 3, 15); // April 15, 1988
   toggle = true; // start with true == shortDate
   power = 5;

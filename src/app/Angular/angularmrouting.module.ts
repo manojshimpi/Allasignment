@@ -29,6 +29,8 @@ import { DependencyprovidersComponent } from './assignonlycomponent/dependencypr
 import { DependencyinjectioninactionComponent } from './assignonlycomponent/dependencyinjectioninaction/dependencyinjectioninaction.component';
 import { NavigatethecomponenttreewithdiComponent } from './assignonlycomponent/navigatethecomponenttreewithdi/navigatethecomponenttreewithdi.component'
 import { ObservablesComponent } from './assignonlycomponent/observables/observables.component';
+import { Test12Component } from './test12/test12.component';
+import { SocialloginComponent } from './sociallogin/sociallogin.component';
 
 
 
@@ -68,6 +70,8 @@ const routes: Routes = [
         { path:'Dependencyproviders' , component:DependencyprovidersComponent},
         { path:'Dependencyinjectioninaction' , component:DependencyinjectioninactionComponent},
         { path:'Navigatethecomponenttreewithdi' , component:NavigatethecomponenttreewithdiComponent},
+        { path:'Test' , component:Test12Component},
+        {path:'socaillogin' , component:SocialloginComponent},
 
         { path:'Observable',component:ObservablesComponent}
        

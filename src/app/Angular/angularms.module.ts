@@ -37,14 +37,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { FileUploadModule } from 'ng2-file-upload';
 
 import { ObservablesComponent } from './assignonlycomponent/observables/observables.component';
-import { TestComponent } from './test/test.component';
+import { Test12Component } from './test12/test12.component';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+import { SocialloginComponent } from './sociallogin/sociallogin.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 @NgModule({
   imports: [
     CommonModule,FormsModule,ReactiveFormsModule,HttpClientModule,FileUploadModule,
-    AngularmroutingModule, PdfViewerModule],
+    AngularmroutingModule, PdfViewerModule,NgbModule,NgbAlertModule,NgxSpinnerModule],
   declarations: [DashComponent, ChildtoparenthComponent,
     HeadermenuComponent, DatabingvariantComponent,
     EventbindingmoretypesComponent, TemplatesmoretypesComponent,
@@ -60,7 +64,8 @@ import { TestComponent } from './test/test.component';
     HighlightDirective,
     ExponentialStrengthPipe,
     ObservablesComponent,
-    TestComponent]
+    Test12Component,
+    SocialloginComponent]
 })
 
 

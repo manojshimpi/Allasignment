@@ -78,7 +78,7 @@ notShow:any=true;
       countryControl: ['',Validators.required],
       hobbies: this.formBuilder.array([], [Validators.required]),
       skills:this.formBuilder.array([
-          this.formBuilder.control(''),
+          this.formBuilder.control('')
       ])
       }, {
         validator: MustMatch('password', 'confirmPassword')

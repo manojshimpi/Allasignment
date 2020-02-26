@@ -1,0 +1,122 @@
+<p>test12 works!</p>
+
+<h1>Data Coming From Node server</h1>
+<div >{{checker}}</div>
+<table border="4" [ngStyle]="{'width.px':300}">
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+    </tr>
+    <tr *ngFor="let item of this.Dataresult;let i=index" [ngStyle]="{'background-color':item.name=='Donuts' ? 'gray' :'orange','color':'white','cursor':'pointer'}" (click)="ShowRecord(item.name)">
+        <td>{{ item.id}}</td>
+        <td>{{ item.name}}</td>
+    </tr>
+</table>
+
+<br><br><br><br><br><br><br>
+
+<p *ngFor="let alert of alerts">
+    <ngb-alert [type]="alert.type" (close)="close(alert)">{{ alert.message }}</ngb-alert>
+  </p>
+  <p>
+    <button type="button" class="btn btn-primary" (click)="reset()">Reset</button>
+  </p>
+<br>
+
+
+<br><br>
+
+<h1>Toggle</h1>
+
+  <p>
+    <button type="button" class="btn btn-info btn-lg" (click)="isCollapsed = !isCollapsed"
+            [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+        Click  Toggle
+    </button>
+  </p>
+
+    <div id="collapseExample" [ngbCollapse]="isCollapsed">
+        <div class="card">
+        <div class="card-body">
+            You can collapse this card by clicking Toggle
+        </div>
+        </div>
+    </div>    
+
+  <br>
+
+  <br><br><br><br>
+
+  <h2>Simple datepicker</h2>
+
+<ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next"></ngb-datepicker>
+
+<hr/>
+
+<button class="btn btn-sm btn-outline-primary mr-2" (click)="selectToday()">Select Today</button>
+<button class="btn btn-sm btn-outline-primary mr-2" (click)="dp.navigateTo()">To current month</button>
+<button class="btn btn-sm btn-outline-primary mr-2" (click)="dp.navigateTo({year: 2013, month: 2})">To Feb 2013</button>
+
+<hr/>
+
+<pre>Month: {{ date.month }}.{{ date.year }}</pre>
+<pre>Model: {{ model | json }}</pre>
+
+
+<br><br><br><br>
+
+
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <p>Hello, World!</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+    </div>
+  </ng-template>
+  
+  <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
+
+  <br><br><br><br>
+
+  <ng-template #t let-fill="fill">
+    <span class="star" [class.full]="fill === 100">
+      <span class="half" [style.width.%]="fill">&hearts;</span>&hearts;
+    </span>
+  </ng-template>
+  
+  
+  <ngb-rating [(rate)]="currentRate" [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
+  
+
+
+  <hr>
+  <pre>Rate: <b>{{currentRate}}</b></pre>
+  <button class="btn btn-sm btn-outline-primary mr-2" (click)="currentRate = 1.35">1.35</button>
+  <button class="btn btn-sm btn-outline-primary mr-2" (click)="currentRate = 4.72">4.72</button>
+
+
+  <br><br><br><br><br><br><br><br><br>
+
+
+
+
+<p>A typeahead example that uses a formatter function for string results</p>
+
+<label for="typeahead-format">Search for a state:</label>
+<input id="typeahead-format" type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search" [resultFormatter]="formatter" />
+<hr>
+<pre>Model: {{ model | json }}</pre>
+
+
+
+<br><br><br><br><br><br><br><br><br>
+
+
